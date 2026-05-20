@@ -236,20 +236,15 @@ export default function Page() {
               <p className="flex items-center gap-3"><Phone /> +39 338 64 43 652</p>
             </div>
           </motion.div>
-          <motion.form {...fadeUp} className="glass rounded-[2rem] p-6 text-volcanic shadow-soft">
-            <form
-  action="https://formspree.io/f/https://formspree.io/f/xqejpayv"
-  method="POST"
->
-            <div className="grid gap-4">
+          <motion.form {...fadeUp} 
+              action="https://formspree.io/f/xqejpayv"
+              method="POST"
+              className="glass rounded-[2rem] p-6 text-volcanic shadow-soft grid gap-4"
               {['Nome', 'Email', 'Telefono', 'Date richieste', 'Numero ospiti'].map((field) => (
-                <input key={field} placeholder={field} className="rounded-2xl border border-white/40 bg-white/80 px-5 py-4 outline-none ring-ocean/20 transition focus:ring-4" />
+                <input key={field} name={field} placeholder={field} className="rounded-2xl border border-white/40 bg-white/80 px-5 py-4 outline-none ring-ocean/20 transition focus:ring-4" />
               ))}
-              <textarea placeholder="Messaggio" rows={5} className="rounded-2xl border border-white/40 bg-white/80 px-5 py-4 outline-none ring-ocean/20 transition focus:ring-4" />
+              <textarea name="Messaggio" placeholder="Messaggio" rows={5} className="rounded-2xl border border-white/40 bg-white/80 px-5 py-4 outline-none ring-ocean/20 transition focus:ring-4" />
               <button type="submit" className="rounded-full bg-ocean px-8 py-4 font-semibold text-white shadow-lg shadow-ocean/20">Richiedi informazioni</button>
-              <p className="text-center text-xs text-volcanic/55">Collega questo form a Formspree, Resend, Brevo o al tuo backend.</p>
-              </form>
-            </div>
           </motion.form>
         </div>
       </section>
