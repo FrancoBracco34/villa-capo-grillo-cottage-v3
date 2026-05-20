@@ -239,7 +239,7 @@ export default function Page() {
           <motion.form {...fadeUp} 
               action="https://formspree.io/f/xqejpayv"
               method="POST"
-              className="glass rounded-[2rem] p-6 text-volcanic shadow-soft grid gap-4"
+              className="glass rounded-[2rem] p-3 text-volcanic shadow-soft grid gap-2"
             >
               {['Nome', 'Email', 'Telefono', 'Date richieste', 'Numero ospiti'].map((field) => (
                 <input key={field} name={field} placeholder={field} className="rounded-2xl border border-white/40 bg-white/80 px-5 py-4 outline-none ring-ocean/20 transition focus:ring-4" />
